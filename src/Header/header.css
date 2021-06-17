@@ -1,0 +1,171 @@
+body {
+    font-family: sans-serif;
+    margin-top: 150px;
+}
+.container {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid gainsboro;
+    margin: 0;
+}
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.logo {
+    display:flex;
+    height: 100px;
+    width: 100px;
+}
+.search_form {
+    display: flex;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.226);
+    border-radius: 5px;
+}
+.service, .city {
+    display: flex;
+    height: 30px;
+    width: 150px;
+}
+.service {
+    padding: 5px;
+    outline: none;
+    border: solid 1px #acacac81;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+}
+.service::-webkit-input-placeholder, .city::-webkit-input-placeholder {
+    color:#999999
+}
+.city {
+    padding: 5px;
+    margin-left: -2px;
+    outline: none;
+    border: solid 1px #acacac81;
+    border-radius:0;
+    border-left: none;
+    border-right: none;
+
+}
+.submit_btn {
+    width: 50px;
+    background-color: #fff;
+    border: solid 1px #999999;
+    border-radius:0 5px 5px 0;
+    background-color: rgb(244,57,57,1);
+    color: #fff;
+    cursor: pointer;
+}
+.links {
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
+.links a{
+    border-radius: 4px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    outline: none;
+    color:black;
+    font-weight: 500;
+
+    padding: 8px 15px;
+    height: 20px;
+}
+.links .login, .links .signup {
+    padding: 13px 15px;
+    border: solid 1px #999999b4;
+    font-size: larger;
+    margin-left: 10px;
+}
+.links .signup{
+    border: none;
+    background-color: rgb(244,57,57,1);
+    color: white;
+    
+}
+.links a:hover {
+    background-color: rgba(190, 190, 190, 0.274);
+}
+#signup:hover {
+    background-color: rgb(255, 0, 0) !important;
+}
+@media (max-width: 1030px){
+    .links .first, .links .second {
+        display: none;
+    }    
+}
+.header_dropdowns {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+.dropbtn {
+    background-color: #4caf4f00;
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    
+}
+.angledown{
+    padding-left: 20px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    padding-right: 20px;
+    border-bottom: 5px solid rgba(244, 57, 57, 0);
+}
+.dropdown:hover {
+    border-bottom: 5px solid rgb(244,57,57,1);
+
+
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e9e9e9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 3px;
+    
+
+}
+.dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 5px;
+}
+.dropdown-content a:hover {
+    background-color: rgb(211, 211, 211);
+    border-radius: 5px;
+
+
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+.dropdown:hover .dropbtn {
+    background-color: #3e8e4100;
+}
