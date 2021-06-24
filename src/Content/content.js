@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './content.css';
 import { faTimes, faAngleDown, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import MapGL, {Marker} from 'react-map-gl';
+import logo from './logo192.png';
 
 
 
@@ -36,13 +37,13 @@ class Content extends Component {
     handleFilterBtn1Click = (e) => {
         const id = e.target.id;
         for (var btn in this.state) {
-            if (btn == id) {
+            if (btn === id) {
                 this.setState({
                     [btn]: !this.state[btn]
                 })
             }
         }
-        if (e.target.className.indexOf(' active') == -1) {
+        if (e.target.className.indexOf(' active') === -1) {
             this.setState({
                 appliedFilters: [...this.state.appliedFilters, " - ", e.target.name]
             })
@@ -64,7 +65,7 @@ class Content extends Component {
 
     handleSortbyChoice = (e) => {
         const id = e.target.id;
-        if (id == "Recommended") {
+        if (id === "Recommended") {
             this.setState({
                 [id]: !this.state[id],
                 "Highest rated": false,
@@ -72,7 +73,7 @@ class Content extends Component {
                 chosenSorting: id
             });
         }
-        if (id == "Highest rated") {
+        if (id === "Highest rated") {
             this.setState({
                 [id]: !this.state[id],
                 "Recommended": false,
@@ -80,7 +81,7 @@ class Content extends Component {
                 chosenSorting: id
             });
         }
-        if (id == "Most Reviewed") {
+        if (id === "Most Reviewed") {
             this.setState({
                 [id]: !this.state[id],
                 "Recommended": false,
@@ -216,7 +217,7 @@ class Content extends Component {
             result.push(
                 <div key={rest.name} className="restaurant">
                     <div className="rest_img">
-                        <img src="/logo192.png" className="logo"></img>
+                        <img src={logo} alt="" className="logo"></img>
                     </div>
                     <div className="rest_info">
                         <div className="info_header">
@@ -334,13 +335,13 @@ class Content extends Component {
         let filters = "";
         let clearall_btn = "clearall_btn";
 
-        if (numberOfFilters == 0) {
+        if (numberOfFilters === 0) {
             numberOfFilters = "";
             filters = "";
             clearall_btn = "clearall_btn";
 
         }
-        if (numberOfFilters == 1) {
+        if (numberOfFilters === 1) {
             filters = "filter";
             clearall_btn += " active";
         } 
@@ -397,7 +398,7 @@ class Content extends Component {
                         </div>
                         <a href="#popup2" className="see-all">See all</a>
                         <div id="popup2" className="popup">
-                            <a href="#header" className="popup__area"></a>
+                            <a href="#header" className="popup__area"> </a>
                             <div className="popup__body">
                                 <div className="popup__content">
                                     <div className="popup__header">

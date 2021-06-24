@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import logo from './logo192.png';
 
 import "./header.css";
 
@@ -10,7 +11,7 @@ export default class Header extends Component {
         return (
             <div className="container">
                 <div className="header" id="header">
-                    <img src="/logo192.png" className="logo"></img>
+                    <img src={logo} alt="" className="logo"></img>
                     <form className="search_form">
                         <input className="service" type="text" placeholder="послуга або товар"></input>
                         <input className="city" type="text" placeholder="адреса, місто, країна"></input>
