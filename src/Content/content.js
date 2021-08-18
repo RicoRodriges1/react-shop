@@ -5,6 +5,11 @@ import { faTimes, faAngleDown, faMapMarkerAlt } from '@fortawesome/free-solid-sv
 import MapGL, {Marker} from 'react-map-gl';
 import logo from './logo192.png';
 
+import 'mapbox-gl/dist/mapbox-gl.css';
+import mapboxgl from 'mapbox-gl';
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 
 class Content extends Component {
@@ -234,7 +239,7 @@ class Content extends Component {
                             </div>
                         </div>
                         <div className="info_info">
-                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+                            123Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
                         </div>
                     </div>
                     
@@ -668,7 +673,7 @@ class Content extends Component {
                     {...this.state.viewport}
                     width="100%"
                     height="80vh"
-                    mapStyle="mapbox://styles/ricorodriges/ckpmqhiia5vjx17phq72odbuo"
+                    mapStyle="mapbox://styles/ricorodriges/ckqawb089076118o14ptpt8ua"
                     onViewportChange={viewport => this.setState({viewport})}
                     mapboxApiAccessToken='pk.eyJ1Ijoicmljb3JvZHJpZ2VzIiwiYSI6ImNrcGlmd3c5bzA5bDMyb214NmZrNW1kaHIifQ.9nicPS2B9tuF6pyN3hAJWw'
                 >

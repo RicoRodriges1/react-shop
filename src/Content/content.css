@@ -8,6 +8,7 @@
 
 }
 .center {
+    z-index: 1;
     width: 47%;
     float:left;
 }
@@ -15,8 +16,8 @@
     width: 35%;
     float: right;
     position: fixed;
-    left: 66%
-
+    left: 66%;
+    z-index: 1;
 }
 .filters, .suggested, .category, .features, .neighborhoods, .distance {
     display: inline-block;
@@ -39,6 +40,7 @@
 }
 .filters .btn1 {
     border-radius: 15px 0 0 15px;
+    
 
 }
 .filters .btn2  {
